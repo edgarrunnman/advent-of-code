@@ -1,3 +1,31 @@
+# Advent of code
+## Instructions
+* Implement Solution abstraction and save implementations within corresponding package `year2021, year2022`
+* Provide year and day values
+* Use attribute `puzzleInput: List<String>` as puzzle input data
+* Implement functions `solution1` and `solution2`
+* Run application
+## Implementation template
+```Kotlin
+package year2022
+import Solution
+import Solution.Companion.getInputData
+
+class Day1Imp: Solution {
+    override val year: Int = 2022 //specify year
+    override val day: Int = 1 //specify day
+    
+    override var puzzleInput: List<String> = getInputData(this.year, this.day)
+
+    //implement first solution
+    override fun solution1(): String = "not rdy"
+    
+    //implement second solution
+    override fun solution2(): String = "not rdy"
+}
+```
+## Implementation example (AOC 2021 day 1)
+```Kotlin
 package year2021
 import Solution
 import Solution.Companion.getInputData
@@ -5,6 +33,7 @@ import Solution.Companion.getInputData
 class Day1Imp : Solution {
     override val year: Int = 2021
     override val day: Int = 1
+    
     override var puzzleInput: List<String> = getInputData(this.year, this.day)
 
     override fun solution1(): String =
@@ -25,4 +54,4 @@ class Day1Imp : Solution {
                 if (this[n] < reading) count + 1 else count
             }
 }
-
+```

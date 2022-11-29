@@ -1,9 +1,8 @@
 # Advent of code
 ## Instructions
-* Create `.env` file in root folder and provide `AOC_TOKEN=` value. That is you private session token found in browser cookies ![image](https://user-images.githubusercontent.com/46990844/204498170-7311407e-ce8a-4338-a93c-72ddb6af405e.png)
+* Create `.env` file in root folder and provide `AOC_TOKEN=` value. That is you private session token found in browser cookies
 
-
-
+    ![image](https://user-images.githubusercontent.com/46990844/204498170-7311407e-ce8a-4338-a93c-72ddb6af405e.png)
 * Implement Solution abstraction and save implementations within corresponding package `year2021, year2022`
 * Provide year and day values
 * Use attribute `puzzleInput: List<String>` as puzzle input data

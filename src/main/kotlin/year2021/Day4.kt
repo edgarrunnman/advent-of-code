@@ -2,9 +2,9 @@ package year2021
 import Solution
 import Solution.Companion.getInputData
 
-class Day3Imp: Solution {
+class Day4: Solution {
     override val year: Int = 2021 //specify year
-    override val day: Int = 3 //specify day
+    override val day: Int = 4 //specify day
     override var puzzleInput: List<String> = getInputData(this.year, this.day)
 
     //implement first solution

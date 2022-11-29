@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2021/Day2Imp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2021/Day3Imp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2021/Day4.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2021/Day3Imp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2021/Day3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2022/Day1Imp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/Day1.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,5 +114,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="14" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

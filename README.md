@@ -89,7 +89,7 @@ class Day1Tests {
   @Test
   fun solution1Test() {
     val fetcher = DataFetcherMoc(testInputData)
-    val day = Day1(fetcher)
+    val day = Day1(fetcher) //Your solution class
     val result = day.solution1()
     Assert.assertEquals(
       "", //Answer (from Advent of Code)
@@ -100,7 +100,7 @@ class Day1Tests {
   @Test
   fun solution2Test() {
     val fetcher = DataFetcherMoc(testInputData)
-    val day = Day1(fetcher)
+    val day = Day1(fetcher) //Your solution class
     val result = day.solution2()
     Assert.assertEquals(
       "", //Answer (from Advent of Code)

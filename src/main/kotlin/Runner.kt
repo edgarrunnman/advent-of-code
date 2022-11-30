@@ -21,9 +21,9 @@ class RunnerImp(private val year: Int) : Runner {
     override fun runAll() {
         this.solutions.forEach {
             val solutionTimer1 = TimeLogger()
-            println("day ${it.day} 1#: ${it.solution1()} - time: ${solutionTimer1.getExecutionTime()} ms")
+            println("day ${it.day} 1#: ${it.partOneResult()} - time: ${solutionTimer1.getExecutionTime()} ms")
             val solutionTimer2 = TimeLogger()
-            println("day ${it.day} 2#: ${it.solution2()} - time: ${solutionTimer2.getExecutionTime()} ms")
+            println("day ${it.day} 2#: ${it.partTwoResult()} - time: ${solutionTimer2.getExecutionTime()} ms")
         }
     }
 
@@ -31,9 +31,9 @@ class RunnerImp(private val year: Int) : Runner {
         this.solutions.first { it.day == day }.let {
 
             val solutionTimer1 = TimeLogger()
-            println("day ${it.day} 1#: ${it.solution1()} - time: ${solutionTimer1.getExecutionTime()} ms")
+            println("day ${it.day} 1#: ${it.partOneResult()} - time: ${solutionTimer1.getExecutionTime()} ms")
             val solutionTimer2 = TimeLogger()
-            println("day ${it.day} 2#: ${it.solution2()} - time: ${solutionTimer2.getExecutionTime()} ms")
+            println("day ${it.day} 2#: ${it.partTwoResult()} - time: ${solutionTimer2.getExecutionTime()} ms")
         }
     }
 }

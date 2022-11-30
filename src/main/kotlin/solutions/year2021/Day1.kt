@@ -12,10 +12,10 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun solution1(): String =
+    override fun partOneResult(): String =
         puzzleInput.map { it.toInt() }.incrementCounter().toString()
 
-    override fun solution2(): String =
+    override fun partTwoResult(): String =
         puzzleInput.map { it.toInt() }.sumByThree().incrementCounter().toString()
 
     private fun List<Int>.sumByThree(): List<Int> =

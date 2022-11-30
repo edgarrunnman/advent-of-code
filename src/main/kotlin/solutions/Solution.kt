@@ -10,7 +10,6 @@ interface Solution {
     fun getInputData(){
         puzzleInput = this.dataFetcher.getPuzzleInput(this.year, this.day)
     }
-    fun solution1(): String
-    fun solution2(): String
+    fun partOneResult(): String
+    fun partTwoResult(): String
 }
-

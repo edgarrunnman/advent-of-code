@@ -28,10 +28,10 @@ class MySolution(override var dataFetcher: DataFetcher) : Solution {
     getInputData()
   }
   //implement first solution
-  override fun solution1(): String = "not rdy"
+  override fun partOneResult(): String = "not rdy"
 
   //implement second solution
-  override fun solution2(): String = "not rdy"
+  override fun partTwoResult(): String = "not rdy"
 }
 ```
 
@@ -52,10 +52,10 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
     getInputData()
   }
 
-  override fun solution1(): String =
+  override fun partOneResult(): String =
     puzzleInput.map { it.toInt() }.incrementCounter().toString()
 
-  override fun solution2(): String =
+  override fun partTwoResult(): String =
     puzzleInput.map { it.toInt() }.sumByThree().incrementCounter().toString()
 
   private fun List<Int>.sumByThree(): List<Int> =
@@ -76,10 +76,10 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
 ```Kotlin
 package year2022
 
-import DataFetcher
 import org.junit.Assert
 import org.junit.Test
 import solutions.year2021.Day1
+import shared.DataFetcherMock
 
 class Day1Tests {
   private var testInputData = listOf(
@@ -88,9 +88,9 @@ class Day1Tests {
 
   @Test
   fun solution1Test() {
-    val fetcher = DataFetcherMoc(testInputData)
+    val fetcher = DataFetcherMock(testInputData)
     val day = Day1(fetcher) //Your solution class
-    val result = day.solution1()
+    val result = day.partOneResult()
     Assert.assertEquals(
       "", //Answer (from Advent of Code)
       result
@@ -99,18 +99,14 @@ class Day1Tests {
 
   @Test
   fun solution2Test() {
-    val fetcher = DataFetcherMoc(testInputData)
+    val fetcher = DataFetcherMock(testInputData)
     val day = Day1(fetcher) //Your solution class
-    val result = day.solution2()
+    val result = day.partTwoResult()
     Assert.assertEquals(
       "", //Answer (from Advent of Code)
       result
     )
   }
-}
-
-class DataFetcherMoc(override var fetched: List<String>) : DataFetcher {
-  override fun getPuzzleInput(year: Int, day: Int): List<String> = fetched
 }
 ```
 

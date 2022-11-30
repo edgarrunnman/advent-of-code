@@ -1,8 +1,8 @@
 package year2022
 
-import DataFetcher
 import org.junit.Assert
 import org.junit.Test
+import shared.DataFetcherMock
 import solutions.year2021.Day1
 
 class Day1Tests {
@@ -12,11 +12,11 @@ class Day1Tests {
     )
 
     @Test
-    fun solution1Test() {
+    fun partOneTest() {
 
-        val fetcher = DataFetcherMoc(testInputData)
+        val fetcher = DataFetcherMock(testInputData)
         val day = Day1(fetcher)
-        val result = day.solution1()
+        val result = day.partOneResult()
 
         Assert.assertEquals(
             "", //Answer (from Advent of Code)
@@ -25,18 +25,14 @@ class Day1Tests {
     }
 
     @Test
-    fun solution2Test() {
-        val fetcher = DataFetcherMoc(testInputData)
+    fun partTwoTest() {
+        val fetcher = DataFetcherMock(testInputData)
         val day = Day1(fetcher)
-        val result = day.solution2()
+        val result = day.partTwoResult()
 
         Assert.assertEquals(
             "", //Answer (from Advent of Code)
             result
         )
     }
-}
-
-class DataFetcherMoc(override var fetched: List<String>) : DataFetcher {
-    override fun getPuzzleInput(year: Int, day: Int): List<String> = fetched
 }

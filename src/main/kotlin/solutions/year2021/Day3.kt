@@ -8,17 +8,15 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
     override val day: Int = 3
     override lateinit var puzzleInput: List<String>
 
-    init {
-        getInputData()
-    }
+    init { getInputData() }
 
-    override fun solution1(): String =
+    override fun partOneResult(): String =
         List(puzzleInput.first().length) { n ->
             puzzleInput.fold(0) { counter, reading -> if (reading[n] == '1') counter + 1 else counter }
         }
             .getEnergyConsumption(puzzleInput.count()).toString()
 
-    override fun solution2(): String =
+    override fun partTwoResult(): String =
         getLifeSupportRating(puzzleInput.dataFilterOxygen(0), puzzleInput.dataFilterCO2(0)).toString()
 
     private fun List<Int>.getEnergyConsumption(maxCount: Int): Int {
@@ -35,14 +33,14 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
 
     private fun List<String>.dataFilterCO2(startIndex: Int): List<String> {
         var count = 0
-        var result: List<String>
+        val result: List<String>
         if (startIndex == this.first().count()) result = this
         else {
             this.forEach { if (it[startIndex] == '1') count += 1 }
             result =
                 if (count == this.count() || count == 0)
                     this.dataFilterCO2(startIndex + 1)
-                else if (count >= this.count() / 2)
+                else if (count * 2 >= this.count())
                     this.filter { it[startIndex] == '1' }.dataFilterCO2(startIndex + 1)
                 else
                     this.filter { it[startIndex] == '0' }.dataFilterCO2(startIndex + 1)
@@ -52,14 +50,14 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
 
     private fun List<String>.dataFilterOxygen(startIndex: Int): List<String> {
         var count = 0
-        var result: List<String>
+        val result: List<String>
         if (startIndex == this.first().count()) result = this
         else {
             this.forEach { if (it[startIndex] == '1') count += 1 }
             result =
                 if (count == this.count() || count == 0)
                     this.dataFilterOxygen(startIndex + 1)
-                else if (count < this.count() / 2)
+                else if (count * 2 < this.count())
                     this.filter { it[startIndex] == '1' }.dataFilterOxygen(startIndex + 1)
                 else
                     this.filter { it[startIndex] == '0' }.dataFilterOxygen(startIndex + 1)

@@ -12,8 +12,8 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
     }
 
     //implement first solution
-    override fun solution1(): String = "not rdy"
+    override fun partOneResult(): String = "not rdy"
 
     //implement second solution
-    override fun solution2(): String = "not rdy"
+    override fun partTwoResult(): String = "not rdy"
 }

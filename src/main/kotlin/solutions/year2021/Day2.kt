@@ -11,11 +11,11 @@ class Day2(override var dataFetcher: DataFetcher) : Solution {
     init {
         getInputData()
     }
-    override fun solution1(): String =
+    override fun partOneResult(): String =
         puzzleInput.fold(Pair(0, 0)) { crd, move -> calcCrd(crd, move) }
             .let { it.first * it.second }.toString()
 
-    override fun solution2(): String =
+    override fun partTwoResult(): String =
         puzzleInput.fold(Triple(0, 0, 0)) { crd, move -> calcCrdWithAim(crd, move) }
             .let { it.first * it.second }.toString()
 

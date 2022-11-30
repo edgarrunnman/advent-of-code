@@ -1,11 +1,16 @@
-package year2021
-import Solution
-import Solution.Companion.getInputData
+package solutions.year2021
 
-class Day1Imp : Solution {
+import DataFetcher
+import solutions.Solution
+
+class Day1(override var dataFetcher: DataFetcher) : Solution {
     override val year: Int = 2021
     override val day: Int = 1
-    override var puzzleInput: List<String> = getInputData(this.year, this.day)
+    override lateinit var puzzleInput: List<String>
+
+    init {
+        getInputData()
+    }
 
     override fun solution1(): String =
         puzzleInput.map { it.toInt() }.incrementCounter().toString()

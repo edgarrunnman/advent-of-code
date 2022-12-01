@@ -6,17 +6,18 @@ import solutions.Solution
 class Day1(override var dataFetcher: DataFetcher) : Solution {
     override val year: Int = 2021
     override val day: Int = 1
-    override lateinit var puzzleInput: List<String>
+    override lateinit var inputAsList: List<String>
+    override lateinit var input: String
 
     init {
         getInputData()
     }
 
     override fun partOneResult(): String =
-        puzzleInput.map { it.toInt() }.incrementCounter().toString()
+        inputAsList.map { it.toInt() }.incrementCounter().toString()
 
     override fun partTwoResult(): String =
-        puzzleInput.map { it.toInt() }.sumByThree().incrementCounter().toString()
+        inputAsList.map { it.toInt() }.sumByThree().incrementCounter().toString()
 
     private fun List<Int>.sumByThree(): List<Int> =
         (1..this.size - 3)

@@ -6,10 +6,9 @@ import shared.DataFetcherMock
 import solutions.year2021.Day1
 
 class Day2Tests {
-    private var testInputData = listOf(
-    ""
-        //Test data (from Advent of Code example)
-    )
+    private var testInputData = """
+       
+    """.trimIndent() //Test data (from Advent of Code example)
 
     @Test
     fun partOneTest() {

@@ -6,22 +6,22 @@ import shared.DataFetcherMock
 import solutions.year2022.Day1
 
 class Day1Tests {
-    private var testInputData = listOf(
-        "1000",
-        "2000",
-        "3000",
-        "",
-        "4000",
-        "",
-        "5000",
-        "6000",
-        "",
-        "7000",
-        "8000",
-        "9000",
-        "",
-        "10000",
-    )
+    private var testInputData = """
+       1000
+       2000
+       3000
+       
+       4000
+       
+       5000
+       6000
+       
+       7000
+       8000
+       9000
+       
+       10000
+    """.trimIndent()
 
     @Test
     fun partOneTest() {

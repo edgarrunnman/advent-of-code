@@ -5,18 +5,19 @@ import solutions.Solution
 
 class Day2(override var dataFetcher: DataFetcher) : Solution {
     override val year: Int = 2021
-    override val day: Int = 2
-    override lateinit var puzzleInput: List<String>
+    override val day: Int = 3
+    override lateinit var inputAsList: List<String>
+    override lateinit var input: String
 
     init {
         getInputData()
     }
     override fun partOneResult(): String =
-        puzzleInput.fold(Pair(0, 0)) { crd, move -> calcCrd(crd, move) }
+        inputAsList.fold(Pair(0, 0)) { crd, move -> calcCrd(crd, move) }
             .let { it.first * it.second }.toString()
 
     override fun partTwoResult(): String =
-        puzzleInput.fold(Triple(0, 0, 0)) { crd, move -> calcCrdWithAim(crd, move) }
+        inputAsList.fold(Triple(0, 0, 0)) { crd, move -> calcCrdWithAim(crd, move) }
             .let { it.first * it.second }.toString()
 
     private fun calcCrd(crd: Pair<Int, Int>, move: String): Pair<Int, Int> =

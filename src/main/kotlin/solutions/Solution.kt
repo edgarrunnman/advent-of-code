@@ -6,10 +6,12 @@ interface Solution {
     val year: Int
     val day: Int
     val dataFetcher: DataFetcher
-    var puzzleInput: List<String>
-    fun getInputData(blanks: Boolean = false){
-        puzzleInput = this.dataFetcher.getPuzzleInput(this.year, this.day)
-        if (!blanks) puzzleInput = puzzleInput.filter { it.isNotBlank() }
+    var inputAsList: List<String>
+    var input: String
+    fun getInputData(removeBlanks: Boolean = true){
+        input = this.dataFetcher.getPuzzleInput(this.year, this.day)
+        inputAsList = input.split("\n")
+        if (removeBlanks) inputAsList = inputAsList.filter { it.isNotBlank() }
     }
     fun partOneResult(): String
     fun partTwoResult(): String

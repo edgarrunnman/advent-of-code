@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DataFetcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/DataFetcher.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/Solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/Solution.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/year2022/Day1Tests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/year2022/Day1Tests.kt" afterDir="false" />
-    </list>
+    <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +76,22 @@
       <recent name="year2022" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="JUnit.Day1Tests">
+    <configuration name="Day1Tests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="year2021.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="year2021" />
+      <option name="MAIN_CLASS_NAME" value="year2021.Day1Tests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Day1Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
@@ -116,33 +123,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day3Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day2Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="year2021.*" />
+          <option name="PATTERN" value="year2022.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="year2021" />
-      <option name="MAIN_CLASS_NAME" value="year2021.Day3Tests" />
+      <option name="PACKAGE_NAME" value="year2022" />
+      <option name="MAIN_CLASS_NAME" value="year2022.Day2Tests" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day3Tests.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="year2021.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="year2021" />
-      <option name="MAIN_CLASS_NAME" value="year2021.Day3Tests" />
-      <option name="METHOD_NAME" value="partTwoTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="JUnit.Day1Tests" />
+        <item itemvalue="JUnit.Day2Tests" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Day1Tests (1)" />
         <item itemvalue="JUnit.Day1Tests.partOneTest" />
-        <item itemvalue="JUnit.Day3Tests.partTwoTest" />
-        <item itemvalue="JUnit.Day3Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +166,7 @@
       <workItem from="1669614510382" duration="6229000" />
       <workItem from="1669633847277" duration="6809000" />
       <workItem from="1669788243909" duration="15707000" />
-      <workItem from="1669871128348" duration="4932000" />
+      <workItem from="1669871128348" duration="10864000" />
     </task>
     <servers />
   </component>

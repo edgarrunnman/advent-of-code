@@ -6,18 +6,19 @@ import shared.DataFetcherMock
 import solutions.year2021.Day1
 
 class Day1Tests {
-    private var testInputData = listOf(
-        "199",
-        "200",
-        "208",
-        "210",
-        "200",
-        "207",
-        "240",
-        "269",
-        "260",
-        "263"
-    )
+    private var testInputData = """
+        199
+        200
+        208
+        210
+        200
+        207
+        240
+        269
+        260
+        263
+    """.trimIndent()
+
 
     @Test
     fun partOneTest() {
@@ -36,7 +37,7 @@ class Day1Tests {
     fun partTwoTest() {
         val fetcher = DataFetcherMock(testInputData)
         val day = Day1(fetcher)
-        val result = day.partOneResult()
+        val result = day.partTwoResult()
 
         Assert.assertEquals(
             "5",

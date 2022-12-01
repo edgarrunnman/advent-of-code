@@ -6,12 +6,12 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
 interface DataFetcher {
-    var fetched: List<String>
-    fun getPuzzleInput(year: Int, day: Int): List<String>
+    var fetched: String
+    fun getPuzzleInput(year: Int, day: Int): String
 }
 class DataFetcherImp: DataFetcher {
-    override var fetched: List<String> = listOf()
-    override fun getPuzzleInput(year: Int, day: Int): List<String> {
+    override var fetched: String = ""
+    override fun getPuzzleInput(year: Int, day: Int): String {
         if (fetched.isEmpty()) {
             val client = HttpClient.newBuilder().build();
             val request = HttpRequest.newBuilder()
@@ -19,7 +19,7 @@ class DataFetcherImp: DataFetcher {
                 .header("cookie", "session=${getToken(dotenv())}")
                 .build();
             val response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            fetched = response.body().split("\n")
+            fetched = response.body()
         }
         return fetched
     }

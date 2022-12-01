@@ -6,14 +6,14 @@ import shared.DataFetcherMock
 import solutions.year2021.Day2
 
 class Day2Tests {
-    private var testInputData = listOf(
-        "forward 5",
-        "down 5",
-        "forward 8",
-        "up 3",
-        "down 8",
-        "forward 2",
-    )
+    private var testInputData = """
+        forward 5
+        down 5
+        forward 8
+        up 3
+        down 8
+        forward 2
+    """.trimIndent()
 
     @Test
     fun partOneTest() {

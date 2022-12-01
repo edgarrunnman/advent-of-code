@@ -22,7 +22,10 @@ import Solution.Companion.getInputData
 class MySolution(override var dataFetcher: DataFetcher) : Solution {
   override val year: Int = 2021 //specify year
   override val day: Int = 4 //specify day
-  override lateinit var puzzleInput: List<String>
+  
+  //use raw input or input as List of input lines
+  override lateinit var inputAsList: List<String> 
+  override lateinit var input: String
 
   init {
     getInputData()
@@ -38,25 +41,26 @@ class MySolution(override var dataFetcher: DataFetcher) : Solution {
 ## Implementation example (AOC 2021 day 1)
 
 ```Kotlin
-package year2021
+package solutions.year2021
 
 import DataFetcher
-import Solution
+import solutions.Solution
 
 class Day1(override var dataFetcher: DataFetcher) : Solution {
   override val year: Int = 2021
   override val day: Int = 1
-  override lateinit var puzzleInput: List<String>
+  override lateinit var inputAsList: List<String>
+  override lateinit var input: String
 
   init {
     getInputData()
   }
 
   override fun partOneResult(): String =
-    puzzleInput.map { it.toInt() }.incrementCounter().toString()
+    inputAsList.map { it.toInt() }.incrementCounter().toString()
 
   override fun partTwoResult(): String =
-    puzzleInput.map { it.toInt() }.sumByThree().incrementCounter().toString()
+    inputAsList.map { it.toInt() }.sumByThree().incrementCounter().toString()
 
   private fun List<Int>.sumByThree(): List<Int> =
     (1..this.size - 3)
@@ -70,6 +74,8 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
         if (this[n] < reading) count + 1 else count
       }
 }
+
+
 ```
 
 ## Unit tests template
@@ -78,19 +84,20 @@ package year2022
 
 import org.junit.Assert
 import org.junit.Test
-import solutions.year2021.Day1
 import shared.DataFetcherMock
 
 class Day1Tests {
-  private var testInputData = listOf(
-    "" //Test data (from Advent of Code example)
-  )
+  private var testInputData = """
+       
+    """.trimIndent() //Test data (from Advent of Code example)
 
   @Test
-  fun solution1Test() {
+  fun partOneTest() {
+
     val fetcher = DataFetcherMock(testInputData)
-    val day = Day1(fetcher) //Your solution class
+    val day = MySolution(fetcher)
     val result = day.partOneResult()
+
     Assert.assertEquals(
       "", //Answer (from Advent of Code)
       result
@@ -98,10 +105,11 @@ class Day1Tests {
   }
 
   @Test
-  fun solution2Test() {
+  fun partTwoTest() {
     val fetcher = DataFetcherMock(testInputData)
-    val day = Day1(fetcher) //Your solution class
+    val day = MySolution(fetcher)
     val result = day.partTwoResult()
+
     Assert.assertEquals(
       "", //Answer (from Advent of Code)
       result

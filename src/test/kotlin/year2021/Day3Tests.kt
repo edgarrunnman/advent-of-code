@@ -6,20 +6,20 @@ import shared.DataFetcherMock
 import solutions.year2021.Day3
 
 class Day3Tests {
-    private var testInputData = listOf(
-        "00100",
-        "11110",
-        "10110",
-        "10111",
-        "10101",
-        "01111",
-        "00111",
-        "11100",
-        "10000",
-        "11001",
-        "00010",
-        "01010",
-    )
+    private var testInputData = """
+        00100
+        11110
+        10110
+        10111
+        10101
+        01111
+        00111
+        11100
+        10000
+        11001
+        00010
+        01010
+    """.trimIndent()
 
     @Test
     fun partOneTest() {

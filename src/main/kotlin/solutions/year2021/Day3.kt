@@ -6,18 +6,18 @@ import solutions.Solution
 class Day3(override var dataFetcher: DataFetcher) : Solution {
     override val year: Int = 2021
     override val day: Int = 3
-    override lateinit var puzzleInput: List<String>
-
+    override lateinit var inputAsList: List<String>
+    override lateinit var input: String
     init { getInputData() }
 
     override fun partOneResult(): String =
-        List(puzzleInput.first().length) { n ->
-            puzzleInput.fold(0) { counter, reading -> if (reading[n] == '1') counter + 1 else counter }
+        List(inputAsList.first().length) { n ->
+            inputAsList.fold(0) { counter, reading -> if (reading[n] == '1') counter + 1 else counter }
         }
-            .getEnergyConsumption(puzzleInput.count()).toString()
+            .getEnergyConsumption(inputAsList.count()).toString()
 
     override fun partTwoResult(): String =
-        getLifeSupportRating(puzzleInput.dataFilterOxygen(0), puzzleInput.dataFilterCO2(0)).toString()
+        getLifeSupportRating(inputAsList.dataFilterOxygen(0), inputAsList.dataFilterCO2(0)).toString()
 
     private fun List<Int>.getEnergyConsumption(maxCount: Int): Int {
         val gamaRate = String(this.map { if (it > maxCount / 2) '1' else '0' }.toCharArray()).toInt(2)

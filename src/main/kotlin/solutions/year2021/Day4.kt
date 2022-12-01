@@ -4,9 +4,10 @@ import DataFetcher
 import solutions.Solution
 
 class Day4(override var dataFetcher: DataFetcher) : Solution {
-    override val year: Int = 2021 //specify year
-    override val day: Int = 4 //specify day
-    override lateinit var puzzleInput: List<String>
+    override val year: Int = 2021
+    override val day: Int = 4
+    override lateinit var inputAsList: List<String>
+    override lateinit var input: String
 
     init {
         getInputData()

@@ -19,7 +19,7 @@ class DataFetcherImp: DataFetcher {
                 .header("cookie", "session=${getToken(dotenv())}")
                 .build();
             val response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            fetched = response.body().split("\n").filter { it.isNotBlank() }
+            fetched = response.body().split("\n")
         }
         return fetched
     }

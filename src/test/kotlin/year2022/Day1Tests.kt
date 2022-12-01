@@ -3,12 +3,24 @@ package year2022
 import org.junit.Assert
 import org.junit.Test
 import shared.DataFetcherMock
-import solutions.year2021.Day1
+import solutions.year2022.Day1
 
 class Day1Tests {
     private var testInputData = listOf(
-    ""
-        //Test data (from Advent of Code example)
+        "1000",
+        "2000",
+        "3000",
+        "",
+        "4000",
+        "",
+        "5000",
+        "6000",
+        "",
+        "7000",
+        "8000",
+        "9000",
+        "",
+        "10000",
     )
 
     @Test
@@ -19,7 +31,7 @@ class Day1Tests {
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            "", //Answer (from Advent of Code)
+            "24000",
             result
         )
     }
@@ -31,7 +43,7 @@ class Day1Tests {
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "", //Answer (from Advent of Code)
+            "45000",
             result
         )
     }

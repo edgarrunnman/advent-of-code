@@ -12,9 +12,11 @@ class Day2(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    //implement first solution
-    override fun partOneResult(): String = "not rdy"
+    override fun partOneResult(): String =
+        inputAsList.sumOf {
+            ((it[2].code - it[0].code + 2) % 3) * 3 + (it[2].code - 87) }.toString()
 
-    //implement second solution
-    override fun partTwoResult(): String = "not rdy"
+    override fun partTwoResult(): String =
+        inputAsList.sumOf {
+            (it[2].code - 88) * 3 + ((it[2].code + it[0].code - 1 ) % 3) + 1 }.toString()
 }

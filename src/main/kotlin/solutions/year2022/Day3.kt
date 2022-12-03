@@ -13,38 +13,34 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    //implement first solution
-    override fun partOneResult(): String {
-        val foo = inputAsList.map { Pair(it.slice(0 until it.count() / 2), it.slice(it.count() / 2 until it.count())) }
-        val foo2 =
-            foo.map { it.first.first { firstType -> it.second.any { secondType -> firstType == secondType } } }
-        val foo3 = foo2.map { it.code }
-        val foo4 = foo3.map { if (it > 96) it - 96 else it - 64 + 26 }
-        val foo5 = foo4.sum()
-        return foo5.toString()
-    }
+    override fun partOneResult(): String =
+        inputAsList.sumOf { it.splitToPair().common().code.priority()}.toString()
 
-    //implement second solution
-    override fun partTwoResult(): String {
-        val foo =
-            (0 until inputAsList.count() / 3).map { inputAsList.filterIndexed { index, s -> ((index + 1)) > ((it + 1) * 3) - 3 && ((index + 1)) <= ((it + 1) * 3) } }
-        val foo2 =
-            foo.map { Pair(it[0].filter { firstType -> it[1].any { secondType -> firstType == secondType } }, it[2]) }
-        val foo3 =
-            foo2.map { it.first.first { firstType -> it.second.any { secondType -> firstType == secondType } }.code }
-        val foo4 = foo3.map { if (it > 96) it - 96 else it - 64 + 26 }
-        val foo5 = foo4.sum()
+    override fun partTwoResult(): String  =
+        inputAsList.groupToTriple().sumOf { it.common().code.priority()}.toString()
 
-        return foo5.toString()
-    }
+    private fun String.splitToPair(): Pair<String, String> =
+        Pair(
+            this.slice(0 until this.count() / 2),
+            this.slice(this.count() / 2 until this.count())
+        )
 
-    fun findType(it: Pair<String, String>): Char {
-        try {
+    private fun Pair<String, String>.common(): Char =
+        this.first.first { this.second.any { it2 -> it == it2 } }
 
-            return it.first.first { firstType -> it.second.any { secondType -> firstType == secondType } }
-        } catch (e: Exception) {
-            var error = it
-        }
-        return 'a'
-    }
+    private fun Triple<String, String, String>.common(): Char =
+        this.first
+            .filter { this.second.any {it2 -> it == it2}}
+            .first { this.third.any {it3 -> it == it3} }
+
+    private fun Int.priority(): Int =
+        if (this > 96) this - 96 else this - 64 + 26
+
+    private fun List<String>.groupToTriple(): List<Triple<String, String, String>> =
+        (0 until this.count() / 3)
+            .map { this.filterIndexed { n, _ ->
+                n + 1 > (it + 1) * 3 - 3 && n + 1 <= (it + 1) * 3 } }
+            .map { Triple(it[0], it[1], it[2]) }
+
+
 }

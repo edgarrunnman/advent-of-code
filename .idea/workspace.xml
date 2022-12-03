@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day4.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/year2022/Day4Tests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/year2022/Day3Tests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/year2022/Day3Tests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,8 +153,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="JUnit.Day3Tests.partTwoTest" />
         <item itemvalue="JUnit.Day3Tests.partOneTest" />
+        <item itemvalue="JUnit.Day3Tests.partTwoTest" />
         <item itemvalue="JUnit.Day4Tests.partOneTest" />
         <item itemvalue="JUnit.Day2Tests" />
       </list>
@@ -178,7 +173,7 @@
       <workItem from="1669788243909" duration="15707000" />
       <workItem from="1669871128348" duration="10864000" />
       <workItem from="1669993568705" duration="1101000" />
-      <workItem from="1670043212671" duration="5411000" />
+      <workItem from="1670043212671" duration="14720000" />
     </task>
     <servers />
   </component>

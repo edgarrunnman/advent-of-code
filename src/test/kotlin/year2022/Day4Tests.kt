@@ -3,23 +3,23 @@ package year2022
 import org.junit.Assert
 import org.junit.Test
 import shared.DataFetcherMock
-import solutions.year2022.Day3
+import solutions.year2021.Day1
 
-class Day3Tests {
+class Day4Tests {
     private var testInputData = """
 vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
-CrZsJsPPZsGzwwsLwLmpwMDw  
+CrZsJsPPZsGzwwsLwLmpwMDw 
     """.trimIndent() //Test data (from Advent of Code example)
 
     @Test
     fun partOneTest() {
 
         val fetcher = DataFetcherMock(testInputData)
-        val day = Day3(fetcher)
+        val day = Day1(fetcher)
         val result = day.partOneResult()
 
         Assert.assertEquals(
@@ -31,11 +31,11 @@ CrZsJsPPZsGzwwsLwLmpwMDw
     @Test
     fun partTwoTest() {
         val fetcher = DataFetcherMock(testInputData)
-        val day = Day3(fetcher)
+        val day = Day1(fetcher)
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "70", //Answer (from Advent of Code)
+            "", //Answer (from Advent of Code)
             result
         )
     }

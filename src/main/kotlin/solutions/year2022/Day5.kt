@@ -3,7 +3,7 @@ package solutions.year2022
 import DataFetcher
 import solutions.Solution
 
-class Day4(override var dataFetcher: DataFetcher) : Solution {
+class Day5(override var dataFetcher: DataFetcher) : Solution {
     override val year: Int = 2022
     override val day: Int = 4
     override lateinit var inputAsList: List<String>

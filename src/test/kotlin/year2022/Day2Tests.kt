@@ -20,7 +20,7 @@ C Z
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            "15",
+            15,
             result
         )
     }
@@ -32,7 +32,7 @@ C Z
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "12",
+            12,
             result
         )
     }

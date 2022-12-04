@@ -13,12 +13,12 @@ class Day5(override var dataFetcher: DataFetcher) : Solution {
     }
 
     //implement first solution
-    override fun partOneResult(): String {
-        return "not rdy"
+    override fun partOneResult(): Int {
+        return 0
     }
 
     //implement second solution
-    override fun partTwoResult(): String {
-        return "not rdy"
+    override fun partTwoResult(): Int {
+        return 0
     }
 }

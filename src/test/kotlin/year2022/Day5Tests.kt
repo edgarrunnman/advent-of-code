@@ -18,7 +18,7 @@ class Day5Tests {
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            "", //Answer (from Advent of Code)
+            1, //Answer (from Advent of Code)
             result
         )
     }
@@ -30,7 +30,7 @@ class Day5Tests {
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "", //Answer (from Advent of Code)
+            1, //Answer (from Advent of Code)
             result
         )
     }

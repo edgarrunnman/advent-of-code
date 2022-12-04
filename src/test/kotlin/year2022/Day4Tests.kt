@@ -7,8 +7,13 @@ import solutions.year2022.Day4
 
 class Day4Tests {
     private var testInputData = """
-       
-    """.trimIndent() //Test data (from Advent of Code example)
+2-4,6-8
+2-3,4-5
+5-7,7-9
+2-8,3-7
+6-6,4-6
+2-6,4-8
+""".trimIndent() //Test data (from Advent of Code example)
 
     @Test
     fun partOneTest() {
@@ -18,7 +23,7 @@ class Day4Tests {
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            "", //Answer (from Advent of Code)
+            2,
             result
         )
     }
@@ -30,7 +35,7 @@ class Day4Tests {
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "", //Answer (from Advent of Code)
+            4,
             result
         )
     }

@@ -13,8 +13,8 @@ class Day6(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
     //implement first solution
-    override fun partOneResult(): String = "not rdy"
+    override fun partOneResult(): Int = 0
 
     //implement second solution
-    override fun partTwoResult(): String = "not rdy"
+    override fun partTwoResult(): Int = 0
 }

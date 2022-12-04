@@ -13,11 +13,11 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun partOneResult(): String =
-        inputAsList.map { it.toInt() }.incrementCounter().toString()
+    override fun partOneResult(): Int =
+        inputAsList.map { it.toInt() }.incrementCounter()
 
-    override fun partTwoResult(): String =
-        inputAsList.map { it.toInt() }.sumByThree().incrementCounter().toString()
+    override fun partTwoResult(): Int =
+        inputAsList.map { it.toInt() }.sumByThree().incrementCounter()
 
     private fun List<Int>.sumByThree(): List<Int> =
         (1..this.size - 3)

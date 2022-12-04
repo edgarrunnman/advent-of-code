@@ -14,17 +14,17 @@ class Day5(override var dataFetcher: DataFetcher) : Solution {
     }
 
     //implement first solution
-    override fun partOneResult(): String {
+    override fun partOneResult(): Int {
         var foo = inputAsList
             .map { it.getStartEndPoints() }
             .filterHorVer()
             .fold(emptyList<Point>()) { list, it -> list.plus(getLinePoints(it)) }
             .let { duplicates(it) }
-        return foo.toString()
+        return foo
     }
 
     //implement second solution
-    override fun partTwoResult(): String = "not rdy"
+    override fun partTwoResult(): Int = 0
 
     private fun String.getStartEndPoints(): Line {
         var foo = this.split(" -> ").map {

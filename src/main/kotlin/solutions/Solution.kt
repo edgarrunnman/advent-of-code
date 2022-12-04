@@ -13,6 +13,6 @@ interface Solution {
         inputAsList = input.split("\n")
         if (removeBlanks) inputAsList = inputAsList.filter { it.isNotBlank() }
     }
-    fun partOneResult(): String
-    fun partTwoResult(): String
+    fun partOneResult(): Int
+    fun partTwoResult(): Int
 }

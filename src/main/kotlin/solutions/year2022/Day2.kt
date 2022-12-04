@@ -12,11 +12,11 @@ class Day2(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun partOneResult(): String =
+    override fun partOneResult(): Int =
         inputAsList.sumOf {
-            ((it[2].code - it[0].code + 2) % 3) * 3 + (it[2].code - 87) }.toString()
+            ((it[2].code - it[0].code + 2) % 3) * 3 + (it[2].code - 87) }
 
-    override fun partTwoResult(): String =
+    override fun partTwoResult(): Int =
         inputAsList.sumOf {
-            (it[2].code - 88) * 3 + ((it[2].code + it[0].code - 1 ) % 3) + 1 }.toString()
+            (it[2].code - 88) * 3 + ((it[2].code + it[0].code - 1 ) % 3) + 1 }
 }

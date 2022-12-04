@@ -12,13 +12,13 @@ class Day2(override var dataFetcher: DataFetcher) : Solution {
     init {
         getInputData()
     }
-    override fun partOneResult(): String =
+    override fun partOneResult(): Int =
         inputAsList.fold(Pair(0, 0)) { crd, move -> calcCrd(crd, move) }
-            .let { it.first * it.second }.toString()
+            .let { it.first * it.second }
 
-    override fun partTwoResult(): String =
+    override fun partTwoResult(): Int =
         inputAsList.fold(Triple(0, 0, 0)) { crd, move -> calcCrdWithAim(crd, move) }
-            .let { it.first * it.second }.toString()
+            .let { it.first * it.second }
 
     private fun calcCrd(crd: Pair<Int, Int>, move: String): Pair<Int, Int> =
         when (move.split(" ").first()) {

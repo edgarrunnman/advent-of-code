@@ -13,18 +13,18 @@ class Day4(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun partOneResult(): String {
+    override fun partOneResult(): Int {
         val inputData = input.split("\n\n")
         val numbers = inputData.first().split(",")
         val tables = inputData.slice(1 until inputData.size).map { Table(it) }
-        return playToFirst(numbers, tables).toString()
+        return playToFirst(numbers, tables)
     }
 
-    override fun partTwoResult(): String {
+    override fun partTwoResult(): Int {
         val inputData = input.split("\n\n")
         val numbers = inputData.first().split(",")
         val tables = inputData.slice(1 until inputData.size).map { Table(it) }
-        return playToLast(numbers, tables).toString()
+        return playToLast(numbers, tables)
     }
 
     private fun playToFirst(numbers: List<String>, tables: List<Table>): Int {

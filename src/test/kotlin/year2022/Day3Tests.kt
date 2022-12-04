@@ -23,7 +23,7 @@ CrZsJsPPZsGzwwsLwLmpwMDw
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            "157", //Answer (from Advent of Code)
+            157, //Answer (from Advent of Code)
             result
         )
     }
@@ -35,7 +35,7 @@ CrZsJsPPZsGzwwsLwLmpwMDw
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "70", //Answer (from Advent of Code)
+            70, //Answer (from Advent of Code)
             result
         )
     }

@@ -13,11 +13,11 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun partOneResult(): String =
-        inputAsList.sumOf { it.splitToPair().common().code.priority() }.toString()
+    override fun partOneResult(): Int =
+        inputAsList.sumOf { it.splitToPair().common().code.priority() }
 
-    override fun partTwoResult(): String =
-        inputAsList.groupToTriple().sumOf { it.common().code.priority() }.toString()
+    override fun partTwoResult(): Int =
+        inputAsList.groupToTriple().sumOf { it.common().code.priority() }
 
     private fun String.splitToPair(): Pair<String, String> =
         Pair(
@@ -26,12 +26,15 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
         )
 
     private fun Pair<String, String>.common(): Char =
-        this.first.first { it in this.second }
+        this.first.toSet()
+            .intersect(this.second.toSet())
+            .first()
 
     private fun Triple<String, String, String>.common(): Char =
-        this.first
-            .filter { it in this.second }
-            .first { it in this.third }
+        this.first.toSet()
+            .intersect(this.second.toSet())
+            .intersect(this.third.toSet())
+            .first()
 
     private fun Int.priority(): Int =
         if (this > 96) this - 96 else this - 64 + 26

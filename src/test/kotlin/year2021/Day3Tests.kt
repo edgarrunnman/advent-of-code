@@ -28,7 +28,7 @@ class Day3Tests {
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            198,
+            "198",
             result
         )
     }
@@ -40,7 +40,7 @@ class Day3Tests {
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            230,
+            "230",
             result
         )
     }

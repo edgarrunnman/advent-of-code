@@ -13,11 +13,11 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun partOneResult(): Int =
-        input.totalPerUnit().first()
+    override fun partOneResult(): String =
+        input.totalPerUnit().first().toString()
 
-    override fun partTwoResult(): Int =
-        input.totalPerUnit().subList(0, 3).sum()
+    override fun partTwoResult(): String =
+        input.totalPerUnit().subList(0, 3).sum().toString()
 
     private fun String.totalPerUnit(): List<Int> =
         this.split("\n\n")

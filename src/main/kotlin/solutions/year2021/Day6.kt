@@ -13,8 +13,8 @@ class Day6(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
     //implement first solution
-    override fun partOneResult(): Int = 0
+    override fun partOneResult(): String = "not impl"
 
     //implement second solution
-    override fun partTwoResult(): Int = 0
+    override fun partTwoResult(): String = "not impl"
 }

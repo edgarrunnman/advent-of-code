@@ -13,11 +13,11 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun partOneResult(): Int =
-        inputAsList.sumOf { it.splitToPair().common().code.priority() }
+    override fun partOneResult(): String =
+        inputAsList.sumOf { it.splitToPair().common().code.priority() }.toString()
 
-    override fun partTwoResult(): Int =
-        inputAsList.groupToTriple().sumOf { it.common().code.priority() }
+    override fun partTwoResult(): String =
+        inputAsList.groupToTriple().sumOf { it.common().code.priority() }.toString()
 
     private fun String.splitToPair(): Pair<String, String> =
         Pair(

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day4.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day5.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,38 +80,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="Day3Tests.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="year2022.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="year2022" />
-      <option name="MAIN_CLASS_NAME" value="year2022.Day3Tests" />
-      <option name="METHOD_NAME" value="partOneTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day4Tests.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="year2022.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="year2022" />
-      <option name="MAIN_CLASS_NAME" value="year2022.Day4Tests" />
-      <option name="METHOD_NAME" value="partOneTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Day4Tests.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
@@ -131,17 +96,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day5Tests.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day5Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="year2021.*" />
+          <option name="PATTERN" value="year2022.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="year2021" />
-      <option name="MAIN_CLASS_NAME" value="year2021.Day5Tests" />
+      <option name="PACKAGE_NAME" value="year2022" />
+      <option name="MAIN_CLASS_NAME" value="year2022.Day5Tests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day5Tests.partOneTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="year2022.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="year2022" />
+      <option name="MAIN_CLASS_NAME" value="year2022.Day5Tests" />
       <option name="METHOD_NAME" value="partOneTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day5Tests.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="year2022.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="year2022" />
+      <option name="MAIN_CLASS_NAME" value="year2022.Day5Tests" />
+      <option name="METHOD_NAME" value="partTwoTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,10 +153,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Day5Tests" />
+        <item itemvalue="JUnit.Day5Tests.partOneTest (1)" />
+        <item itemvalue="JUnit.Day5Tests.partTwoTest" />
         <item itemvalue="JUnit.Day4Tests.partTwoTest" />
-        <item itemvalue="JUnit.Day4Tests.partOneTest" />
-        <item itemvalue="JUnit.Day5Tests.partOneTest" />
-        <item itemvalue="JUnit.Day3Tests.partOneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +175,7 @@
       <workItem from="1669993568705" duration="1101000" />
       <workItem from="1670043212671" duration="14720000" />
       <workItem from="1670129481202" duration="4791000" />
-      <workItem from="1670180924856" duration="1059000" />
+      <workItem from="1670180924856" duration="15311000" />
     </task>
     <servers />
   </component>
@@ -204,11 +200,6 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="14" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/solutions/year2021/Day5.kt</url>
-          <line>56</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

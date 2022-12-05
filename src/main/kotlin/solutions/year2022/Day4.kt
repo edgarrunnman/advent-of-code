@@ -13,23 +13,23 @@ class Day4(override var dataFetcher: DataFetcher) : Solution {
         getInputData()
     }
 
-    override fun partOneResult(): Int =
+    override fun partOneResult(): String =
         inputAsList
             .toPairs()
             .map {
                 Pair(it.first.toSection(), it.second.toSection())
                     .fullyContains()
             }
-            .count { it }
+            .count { it }.toString()
 
-    override fun partTwoResult(): Int =
+    override fun partTwoResult(): String =
         inputAsList
             .toPairs()
             .map {
                 Pair(it.first.toSection(), it.second.toSection())
                     .contains()
             }
-            .count { it }
+            .count { it }.toString()
 
     private fun List<String>.toPairs(): List<Pair<String, String>> {
         return this.map { it.split(",").let { parts -> Pair(parts[0], parts[1]) } }

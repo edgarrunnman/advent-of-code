@@ -10,14 +10,14 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
     override lateinit var input: String
     init { getInputData() }
 
-    override fun partOneResult(): Int =
+    override fun partOneResult(): String =
         List(inputAsList.first().length) { n ->
             inputAsList.fold(0) { counter, reading -> if (reading[n] == '1') counter + 1 else counter }
         }
-            .getEnergyConsumption(inputAsList.count())
+            .getEnergyConsumption(inputAsList.count()).toString()
 
-    override fun partTwoResult(): Int =
-        getLifeSupportRating(inputAsList.dataFilterOxygen(0), inputAsList.dataFilterCO2(0))
+    override fun partTwoResult(): String =
+        getLifeSupportRating(inputAsList.dataFilterOxygen(0), inputAsList.dataFilterCO2(0)).toString()
 
     private fun List<Int>.getEnergyConsumption(maxCount: Int): Int {
         val gamaRate = String(this.map { if (it > maxCount / 2) '1' else '0' }.toCharArray()).toInt(2)

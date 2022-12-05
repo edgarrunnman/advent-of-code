@@ -31,10 +31,10 @@ class MySolution(override var dataFetcher: DataFetcher) : Solution {
     getInputData()
   }
   //implement first solution
-  override fun partOneResult(): Int = 0
+  override fun partOneResult(): String = ""
 
   //implement second solution
-  override fun partTwoResult(): int = 0
+  override fun partTwoResult(): String = ""
 }
 ```
 
@@ -56,11 +56,11 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
     getInputData()
   }
 
-  override fun partOneResult(): Int =
-    inputAsList.map { it.toInt() }.incrementCounter()
+  override fun partOneResult(): String =
+    inputAsList.map { it.toInt() }.incrementCounter().toString()
 
-  override fun partTwoResult(): Int =
-    inputAsList.map { it.toInt() }.sumByThree().incrementCounter()
+  override fun partTwoResult(): String =
+    inputAsList.map { it.toInt() }.sumByThree().incrementCounter().toString()
 
   private fun List<Int>.sumByThree(): List<Int> =
     (1..this.size - 3)
@@ -99,7 +99,7 @@ class Day1Tests {
     val result = day.partOneResult()
 
     Assert.assertEquals(
-      -1, //Answer (from Advent of Code)
+      "", //Answer (from Advent of Code)
       result
     )
   }
@@ -111,7 +111,7 @@ class Day1Tests {
     val result = day.partTwoResult()
 
     Assert.assertEquals(
-      -1, //Answer (from Advent of Code)
+      "", //Answer (from Advent of Code)
       result
     )
   }

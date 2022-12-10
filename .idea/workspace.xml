@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day10.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day10.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/year2022/Day10Tests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/year2022/Day10Tests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <recent name="solutions.year2021" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Day10Tests.partTwoTest">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="Day10Tests.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
@@ -156,10 +154,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Day10Tests.partTwoTest" />
-        <item itemvalue="JUnit.Day10Tests.partOneTest" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="JUnit.Day9Tests" />
+        <item itemvalue="JUnit.Day10Tests.partTwoTest" />
+        <item itemvalue="JUnit.Day10Tests.partOneTest" />
         <item itemvalue="JUnit.Day9Solution2Tests" />
       </list>
     </recent_temporary>

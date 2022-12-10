@@ -31,25 +31,23 @@ class Day10(override var dataFetcher: DataFetcher) : Solution {
                 Pair(index, cycle)
             }
             .groupBy { it.first / 40 }
-            .map {
-                it.value.map { sprt ->
-                    if (sprt.first % 40 in (sprt.second - 1..sprt.second + 1)) "#" else "."
-                }.joinToString("")
+            .map { groupedCycles ->
+                groupedCycles.value.joinToString("") {
+                    if (it.first % 40 in (it.second - 1..it.second + 1)) "#"
+                    else "."
+                }
             }
             .slice(0 until 6)
             .joinToString("\n")
 
     private fun List<String>.generateCycles(): List<Int> =
         this.fold(listOf(1)) { cycles, cmd ->
-            cmd.executeCmd(cycles)
+            if (cmd.startsWith("noop")) cycles + cycles.last()
+            else cycles + listOf(
+                cycles.last(),
+                cycles.last() + cmd.split(" ")[1].toInt()
+            )
         }
-
-    private fun String.executeCmd(cycles: List<Int>): List<Int> =
-        when {
-            this.startsWith("noop") -> cycles + cycles.last()
-            else -> cycles + listOf(cycles.last(), cycles.last() + this.split(" ")[1].toInt())
-        }
-
 }
 
 

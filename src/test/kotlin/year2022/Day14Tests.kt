@@ -31,7 +31,7 @@ class Day14Tests {
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "", //Answer (from Advent of Code)
+            "93", //Answer (from Advent of Code)
             result
         )
     }

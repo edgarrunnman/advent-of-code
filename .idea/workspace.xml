@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day15.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day15.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/year2022/Day15Tests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/year2022/Day15Tests.kt" afterDir="false" />
     </list>
@@ -84,22 +83,7 @@
       <recent name="solutions.year2021" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Day15Tests.partOneTest">
-    <configuration name="Day13Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="year2022.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="year2022" />
-      <option name="MAIN_CLASS_NAME" value="year2022.Day13Tests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="Day14Tests.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
@@ -147,6 +131,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day15Tests.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="year2022.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="year2022" />
+      <option name="MAIN_CLASS_NAME" value="year2022.Day15Tests" />
+      <option name="METHOD_NAME" value="partTwoTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="advent-of-code" />
@@ -156,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Day15Tests.partOneTest" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Day15Tests.partTwoTest" />
+        <item itemvalue="JUnit.Day15Tests.partOneTest" />
         <item itemvalue="JUnit.Day15Tests" />
         <item itemvalue="JUnit.Day14Tests.partOneTest" />
-        <item itemvalue="JUnit.Day13Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -186,6 +186,8 @@
       <workItem from="1670572972090" duration="18697000" />
       <workItem from="1670994949031" duration="25566000" />
       <workItem from="1671081183923" duration="12768000" />
+      <workItem from="1671173660119" duration="94000" />
+      <workItem from="1671173765268" duration="21605000" />
     </task>
     <servers />
   </component>
@@ -217,8 +219,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/solutions/year2022/Day15.kt</url>
-          <line>22</line>
-          <option name="timeStamp" value="18" />
+          <line>51</line>
+          <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

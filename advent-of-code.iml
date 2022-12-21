@@ -29,5 +29,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="jetbrains.kotlin.test.junit" level="project" />
+    <orderEntry type="library" name="de.brudaswen.kotlinx.coroutines.swt" level="project" />
   </component>
 </module>

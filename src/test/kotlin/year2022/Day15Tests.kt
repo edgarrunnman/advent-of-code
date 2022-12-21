@@ -23,6 +23,7 @@ Sensor at x=20, y=1: closest beacon is at x=15, y=3
 """.trimIndent() //Test data (from Advent of Code example)
 
     private var inputData = """
+Sensor at x=3011731, y=1976307: closest beacon is at x=2729595, y=2000000
 Sensor at x=1384790, y=3850432: closest beacon is at x=2674241, y=4192888
 Sensor at x=2825953, y=288046: closest beacon is at x=2154954, y=-342775
 Sensor at x=3553843, y=2822363: closest beacon is at x=3444765, y=2347460
@@ -44,11 +45,10 @@ Sensor at x=1966905, y=2495701: closest beacon is at x=2761496, y=2831113
 Sensor at x=511976, y=2696731: closest beacon is at x=-276514, y=2995794
 Sensor at x=3094465, y=2478570: closest beacon is at x=3444765, y=2347460
 Sensor at x=806671, y=228252: closest beacon is at x=-281319, y=668868
-Sensor at x=3011731, y=1976307: closest beacon is at x=2729595, y=2000000
     """.trimIndent()
 
 private var testInputData2 = """
-Sensor at x=16, y=7: closest beacon is at x=15, y=3
+Sensor at x=2, y=0: closest beacon is at x=2, y=10
 """.trimIndent() //Test data (from Advent of Code example)
 
     // 4559759 tooLow'
@@ -67,7 +67,7 @@ Sensor at x=16, y=7: closest beacon is at x=15, y=3
             result
         )
     }
-
+    // 2045732901 toolow
     @Test
     fun partTwoTest() {
         val fetcher = DataFetcherMock(testInputData)

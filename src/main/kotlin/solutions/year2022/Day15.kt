@@ -24,7 +24,7 @@ class Day15(override var dataFetcher: DataFetcher) : Solution {
 //        var foo5 = foo2.getAllLineCoverageSet(line)
 //        var foo6 = foo5.filter { !foo.filter { sb -> sb.b.y == line }.map { sb -> sb.b.x }.contains(it) }
 //        return foo6.count().toString()
-//        return "hej"
+        return "hej"
     }
 
     override fun partTwoResult(): String {

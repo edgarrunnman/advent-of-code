@@ -1,4 +1,4 @@
-package year2022
+package solutions.year2022
 
 import org.junit.Assert
 import org.junit.Test

@@ -2,6 +2,7 @@ package solutions.year2024
 
 import DataFetcher
 import solutions.Solution
+import kotlin.math.abs
 
 class Day1(override var dataFetcher: DataFetcher) : Solution {
     override val year: Int = 2024
@@ -20,7 +21,7 @@ class Day1(override var dataFetcher: DataFetcher) : Solution {
                         right.map { it.toInt() }.sortedBy { id -> id }
             }.let { (left, right) ->
                 left.zip(right)
-            }.sumOf { (left, right) -> Math.abs(left - right) }.toString()
+            }.sumOf { (left, right) -> abs(left - right) }.toString()
 
     override fun partTwoResult(): String =
         normalizedInput()

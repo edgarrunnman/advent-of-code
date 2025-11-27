@@ -1,40 +1,40 @@
-package year2022
+package solutions.year2024
 
+import junit.framework.TestCase
 import org.junit.Assert
 import org.junit.Test
 import shared.DataFetcherMock
-import solutions.year2022.*
 
-class Day12Tests {
+class Day2Test {
+
     private var testInputData = """
-Sabqponm
-abcryxxl
-accszExk
-acctuvwj
-abdefghi
-    """.trimIndent() //Test data (from Advent of Code example)
+7 6 4 2 1
+1 2 7 8 9
+9 7 6 2 1
+1 3 2 4 5
+8 6 4 4 1
+1 3 6 7 9
+    """.trimIndent()
 
     @Test
     fun partOneTest() {
-
         val fetcher = DataFetcherMock(testInputData)
-        val day = Day12(fetcher)
+        val day = Day2(fetcher)
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            "31", //Answer (from Advent of Code)
+            "2",
             result
         )
     }
-
     @Test
     fun partTwoTest() {
         val fetcher = DataFetcherMock(testInputData)
-        val day = Day12(fetcher)
+        val day = Day2(fetcher)
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "29", //Answer (from Advent of Code)
+            "4",
             result
         )
     }

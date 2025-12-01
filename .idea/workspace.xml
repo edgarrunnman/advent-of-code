@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day1Test.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2024/Day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2024/Day3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/solutions/year2024/Day3Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2024/Day3Test.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +59,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.Day1Test.executor": "Run",
     "JUnit.Day1Test.partOneTest.executor": "Run",
     "JUnit.Day1Test.partTwoTest.executor": "Run",
     "JUnit.Day2Test.partOneTest.executor": "Run",
@@ -110,57 +111,56 @@
       <recent name="solutions.year2024" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="solutions.year2025" />
       <recent name="solutions.year2024" />
       <recent name="year2022" />
       <recent name="solutions.year2022" />
       <recent name="year2021" />
-      <recent name="solutions.year2021" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="Day2Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="solutions.year2024.*" />
+          <option name="PATTERN" value="solutions.year2025.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="solutions.year2024" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2024.Day2Test" />
+      <option name="PACKAGE_NAME" value="solutions.year2025" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day1Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day1Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solutions.year2025.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solutions.year2025" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day1Test" />
       <option name="METHOD_NAME" value="partOneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day2Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day1Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="solutions.year2024.*" />
+          <option name="PATTERN" value="solutions.year2025.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="solutions.year2024" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2024.Day2Test" />
+      <option name="PACKAGE_NAME" value="solutions.year2025" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day1Test" />
       <option name="METHOD_NAME" value="partTwoTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day3Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="solutions.year2024.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="solutions.year2024" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2024.Day3Test" />
-      <option name="METHOD_NAME" value="partOneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -192,18 +192,17 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Day1Test" />
+        <item itemvalue="JUnit.Day1Test.partTwoTest" />
+        <item itemvalue="JUnit.Day1Test.partOneTest" />
         <item itemvalue="JUnit.Day3Test.partTwoTest" />
-        <item itemvalue="JUnit.Day3Test.partOneTest" />
-        <item itemvalue="JUnit.Day2Test.partTwoTest" />
-        <item itemvalue="JUnit.Day2Test.partOneTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day1Test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day2Test.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/Solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/Solution.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +63,7 @@
     "JUnit.Day1Test.executor": "Run",
     "JUnit.Day1Test.partOneTest.executor": "Run",
     "JUnit.Day1Test.partTwoTest.executor": "Run",
+    "JUnit.Day2Test.executor": "Run",
     "JUnit.Day2Test.partOneTest.executor": "Run",
     "JUnit.Day2Test.partTwoTest.executor": "Run",
     "JUnit.Day3Test.partOneTest.executor": "Run",
@@ -72,12 +74,14 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
     "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/edgar/dev/advent-of-code",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day1Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
         <pattern>
@@ -143,14 +147,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="solutions.year2025" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day1Test" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day2Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solutions.year2025.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solutions.year2025" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day2Test" />
       <option name="METHOD_NAME" value="partOneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day1Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day2Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
         <pattern>
@@ -159,23 +178,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="solutions.year2025" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day1Test" />
-      <option name="METHOD_NAME" value="partTwoTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day3Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="solutions.year2024.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="solutions.year2024" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2024.Day3Test" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day2Test" />
       <option name="METHOD_NAME" value="partTwoTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -192,10 +195,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Day2Test" />
+        <item itemvalue="JUnit.Day2Test.partTwoTest" />
+        <item itemvalue="JUnit.Day2Test.partOneTest" />
         <item itemvalue="JUnit.Day1Test" />
-        <item itemvalue="JUnit.Day1Test.partTwoTest" />
-        <item itemvalue="JUnit.Day1Test.partOneTest" />
-        <item itemvalue="JUnit.Day3Test.partTwoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -234,6 +237,7 @@
       <workItem from="1764012006944" duration="3983000" />
       <workItem from="1764016006671" duration="805000" />
       <workItem from="1764186021447" duration="6620000" />
+      <workItem from="1764656625564" duration="4711000" />
     </task>
     <servers />
   </component>

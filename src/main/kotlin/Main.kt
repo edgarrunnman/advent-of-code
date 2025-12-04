@@ -1,5 +1,5 @@
-fun main(args: Array<String>) {
+fun main() {
     val runner = RunnerImp(2025)
 //    runner.runAll()
-    runner.runByDay(3)
+    runner.runByDay(4)
 }

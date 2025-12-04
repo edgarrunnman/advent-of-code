@@ -16,13 +16,15 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
 
     override fun partOneResult(): String =
         inputAsList.sumOf {
-            it.getJoltageOf(2)
+//            it.getJoltageOf(2)
+            solveByViktor(2, it)!!.toBigInteger()
         }.toString()
 
 
     override fun partTwoResult(): String =
         inputAsList.sumOf {
-            it.getJoltageOf(12)
+//            it.getJoltageOf(12)
+            solveByViktor(12, it)!!.toBigInteger()
         }.toString()
 
 
@@ -51,4 +53,26 @@ class Day3(override var dataFetcher: DataFetcher) : Solution {
             it.second.first()
         }
             .toSortedMap().values.last()
+
+
+    private tailrec fun solveByViktor(size: Int, input: String, prefix: String = ""): String? {
+        if (size <= 0) return prefix
+        if(input.length == size) return prefix+input
+        if(input.length < size) return null
+        val candidates= input
+            .dropLast(size-1)
+            .asSequence()
+            .withIndex()
+            .map { indexedValue -> indexedValue.map{ it.digitToInt()} }
+        var largest = candidates.first()
+        for (c in candidates.drop(1)) {
+            if (largest.value==9) break
+            if (c.value > largest.value) {
+                largest = c
+            }
+        }
+        return solveByViktor(size-1, input.drop(largest.index+1), prefix="$prefix${largest.value}")
+    }
+
+    private fun <T, U> IndexedValue<T>.map(f: (T) -> U) = IndexedValue(index, f(value))
 }

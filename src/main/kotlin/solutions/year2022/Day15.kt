@@ -1,7 +1,6 @@
 package solutions.year2022
 
 import DataFetcher
-import TimeLogger
 import solutions.Solution
 import kotlin.math.abs
 import kotlin.properties.Delegates

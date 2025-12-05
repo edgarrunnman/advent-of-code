@@ -6,4 +6,3 @@ fun neighborsOf(x: Int, y: Int, levels: Int = 1): List<Pair<Int, Int>> =
         }
     }
 
-

@@ -1,4 +1,5 @@
 package solutions
+
 import DataFetcher
 
 interface Solution {
@@ -8,12 +9,17 @@ interface Solution {
     var inputAsList: List<String>
     var input: String
 
-    fun getInputData(removeBlanks: Boolean = true){
+    fun getInputData(removeBlanks: Boolean = true, keepLineBreaks: Boolean = false) {
         val rawInput = this.dataFetcher.getPuzzleInput(this.year, this.day)
-        input = rawInput.replace("\n", "")
+        if (keepLineBreaks)
+            input = rawInput
+        else
+            input = rawInput.replace("\n", "")
+
         inputAsList = rawInput.split("\n")
         if (removeBlanks) inputAsList = inputAsList.filter { it.isNotBlank() }
     }
+
     fun partOneResult(): String
     fun partTwoResult(): String
 }

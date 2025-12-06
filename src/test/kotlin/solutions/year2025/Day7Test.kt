@@ -4,35 +4,32 @@ import org.junit.Assert
 import org.junit.Test
 import shared.DataFetcherMock
 
-class Day6Test {
+class Day7Test {
 
     private var testInputData = """
-123 328  51 64  
- 45 64  387 23 
-  6 98  215 314
-*   +   *   +  
+        XXX
     """.trimIndent()
 
 
     @Test
     fun partOneTest() {
         val fetcher = DataFetcherMock(testInputData)
-        val day = Day6(fetcher)
+        val day = Day7(fetcher)
         val result = day.partOneResult()
 
         Assert.assertEquals(
-            "4277559",
+            "xxx",
             result
         )
     }
     @Test
     fun partTwoTest() {
         val fetcher = DataFetcherMock(testInputData)
-        val day = Day6(fetcher)
+        val day = Day7(fetcher)
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "3263827",
+            "xxx",
             result
         )
     }

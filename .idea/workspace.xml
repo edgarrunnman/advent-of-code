@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day7.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day7Test.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day6.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day6.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day6Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day6Test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day7.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day7.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day7Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day7Test.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +76,9 @@
     "JUnit.Day5Test.partTwoTest.executor": "Run",
     "JUnit.Day6Test.partOneTest.executor": "Run",
     "JUnit.Day6Test.partTwoTest.executor": "Run",
+    "JUnit.Day7Test.executor": "Run",
+    "JUnit.Day7Test.partOneTest.executor": "Run",
+    "JUnit.Day7Test.partTwoTest.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -133,54 +134,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="Day5Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="solutions.year2025.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="solutions.year2025" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day5Test" />
-      <option name="METHOD_NAME" value="partOneTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day5Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="solutions.year2025.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="solutions.year2025" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day5Test" />
-      <option name="METHOD_NAME" value="partTwoTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day6Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="solutions.year2025.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="solutions.year2025" />
-      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day6Test" />
-      <option name="METHOD_NAME" value="partOneTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Day6Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
@@ -197,6 +150,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day7Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solutions.year2025.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solutions.year2025" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day7Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day7Test.partOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solutions.year2025.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solutions.year2025" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day7Test" />
+      <option name="METHOD_NAME" value="partOneTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day7Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solutions.year2025.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solutions.year2025" />
+      <option name="MAIN_CLASS_NAME" value="solutions.year2025.Day7Test" />
+      <option name="METHOD_NAME" value="partTwoTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="advent-of-code" />
@@ -207,10 +207,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Day7Test.partTwoTest" />
+        <item itemvalue="JUnit.Day7Test.partOneTest" />
+        <item itemvalue="JUnit.Day7Test" />
         <item itemvalue="JUnit.Day6Test.partTwoTest" />
-        <item itemvalue="JUnit.Day6Test.partOneTest" />
-        <item itemvalue="JUnit.Day5Test.partTwoTest" />
-        <item itemvalue="JUnit.Day5Test.partOneTest" />
       </list>
     </recent_temporary>
   </component>

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/BitMap.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day7.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day7.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +132,7 @@
       <recent name="year2021" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Day7Test.partTwoTest">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="Day6Test.partTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <extension name="coverage">
@@ -205,8 +205,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Day7Test.partTwoTest" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Day7Test.partTwoTest" />
         <item itemvalue="JUnit.Day7Test.partOneTest" />
         <item itemvalue="JUnit.Day7Test" />
         <item itemvalue="JUnit.Day6Test.partTwoTest" />

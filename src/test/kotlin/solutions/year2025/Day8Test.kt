@@ -28,8 +28,11 @@ class Day8Test {
 984,92,344
 425,690,689
     """.trimIndent()
-
-
+//0 (162,817,812) and 19 (425,690,689) to circut1 (2)
+//0 (162,817,812) and 7 (431,825,988) to circut1 (3)
+//2 (906,360,560) and 13 (805,96,715) to cicut2 (2)
+//7 (431,825,988) and 19 (425,690,689) nothing happens?
+    // 5 4 2 2 1 1 1 1 1 1 1
     @Test
     fun partOneTest() {
         val fetcher = DataFetcherMock(testInputData)

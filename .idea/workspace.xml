@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974e5808-8476-4ae1-87e4-e19cf9efe1f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day8.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day8Test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/Vec3Utils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/solutions/year2025/Day8.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day8Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/solutions/year2025/Day8Test.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,53 +57,53 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.Day1Test.executor": "Run",
-    "JUnit.Day1Test.partOneTest.executor": "Run",
-    "JUnit.Day1Test.partTwoTest.executor": "Run",
-    "JUnit.Day2Test.executor": "Run",
-    "JUnit.Day2Test.partOneTest.executor": "Run",
-    "JUnit.Day2Test.partTwoTest.executor": "Run",
-    "JUnit.Day3Test.executor": "Run",
-    "JUnit.Day3Test.partOneTest.executor": "Run",
-    "JUnit.Day3Test.partTwoTest.executor": "Run",
-    "JUnit.Day4Test.executor": "Run",
-    "JUnit.Day4Test.partOneTest.executor": "Run",
-    "JUnit.Day4Test.partTwoTest.executor": "Run",
-    "JUnit.Day5Test.partOneTest.executor": "Run",
-    "JUnit.Day5Test.partTwoTest.executor": "Run",
-    "JUnit.Day6Test.partOneTest.executor": "Run",
-    "JUnit.Day6Test.partTwoTest.executor": "Run",
-    "JUnit.Day7Test.executor": "Run",
-    "JUnit.Day7Test.partOneTest.executor": "Run",
-    "JUnit.Day7Test.partTwoTest.executor": "Run",
-    "JUnit.Day8Test.partOneTest.executor": "Run",
-    "Kotlin.MainKt.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/edgar/dev/advent-of-code",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.ktlint-plugin"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.Day1Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day1Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day1Test.partTwoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day2Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day2Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day2Test.partTwoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day3Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day3Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day3Test.partTwoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day4Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day4Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day4Test.partTwoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day5Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day5Test.partTwoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day6Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day6Test.partTwoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day7Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day7Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day7Test.partTwoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Day8Test.partOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/edgar/dev/advent-of-code&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.ktlint-plugin&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -254,6 +255,9 @@
       <workItem from="1764830377670" duration="12616000" />
       <workItem from="1764915776000" duration="30666000" />
       <workItem from="1765348912176" duration="9938000" />
+      <workItem from="1765436199953" duration="2616000" />
+      <workItem from="1765440427979" duration="166000" />
+      <workItem from="1765441144990" duration="7013000" />
     </task>
     <servers />
   </component>

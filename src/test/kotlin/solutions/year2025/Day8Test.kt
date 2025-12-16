@@ -48,11 +48,11 @@ class Day8Test {
     @Test
     fun partTwoTest() {
         val fetcher = DataFetcherMock(testInputData)
-        val day = Day7(fetcher)
+        val day = Day8(fetcher)
         val result = day.partTwoResult()
 
         Assert.assertEquals(
-            "40",
+            "25272",
             result
         )
     }

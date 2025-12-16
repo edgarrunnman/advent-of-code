@@ -1,10 +1,14 @@
 package utils
 
+import kotlin.math.pow
+
 data class Vec3(val x: Double, val y: Double, val z: Double)
 
 fun Vec3.distance(other: Vec3): Double =
     kotlin.math.sqrt(
-        (this.x - other.x).let { it * it } + (this.y - other.y).let { it * it } + (this.z - other.z).let { it * it }
+        (this.x - other.x).pow(2)
+                + (this.y - other.y).pow(2)
+                + (this.z - other.z).pow(2)
     )
 
 fun String.toVec3() =

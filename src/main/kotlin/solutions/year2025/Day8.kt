@@ -2,6 +2,7 @@ package solutions.year2025
 
 import DataFetcher
 import solutions.Solution
+import utils.Vec3
 import utils.distance
 import utils.toVec3
 import kotlin.collections.toMutableMap
@@ -17,76 +18,96 @@ class Day8(override var dataFetcher: DataFetcher) : Solution {
     }
 
     override fun partOneResult(): String {
-        val boxesWithDist = inputAsList.mapIndexed { id, line ->
+        val boxes = inputAsList.mapIndexed { id, line ->
             id to line.toVec3()
-        }
-        val maxCount = if (boxesWithDist.count() > 50) 1000 else 10
+        }.toSet()
 
-        var shortestConnections = boxesWithDist.flatMap { (specId, specVec) ->
-            boxesWithDist.filterNot { (nextId, _) -> nextId == specId }
-                .map { (nextId, nextVec) -> (specId to nextId) to specVec.distance(nextVec) }
-        }.sortedBy { (_, dist) -> dist }.map { it.first }.toMutableList()
+        val maxCount = if (boxes.count() > 50) 1000 else 10
 
-        var counter = 1
-        val results = boxesWithDist.associate { it.first to mutableSetOf(it.first) }
+        val boxPairsByDist = BoxPairsByDist.new(boxes)
+
+        val circuits: MutableMap<Int, Circuit> = boxes.associate { (id, _) -> id to Circuit(id) }.toMutableMap()
+        var counter = 0
         while (maxCount > counter) {
-//            shortestConnections.forEach { (id, connections) ->
-//                println(id to connections)
-//            }
-//            println()
-//            println()
-            val (specB1, specB2) = shortestConnections.first()
-
-
-//            val group1 = results.singleOrNull { group -> group.contains(specB1) }
-//            val group2 = results.singleOrNull { group -> group.contains(specB2) }
-            val group1 = results[specB1]!!
-            val group2 = results[specB2]!!
-//            println("grp1 $group1 - grp2 $group2")
-            when {
-                group1.isNotEmpty() && group2.isNotEmpty() -> {
-                    group1.addAll(group2)
-                    group2.clear()
-                    continue
-                }
-                group1.isEmpty() && group2.isEmpty() -> {
-                    results.add(mutableSetOf(specB1, specB2))
-                    counter++
-                }
-
-                group1 != null && group2 == null -> {
-                    group1.add(specB2)
-                    counter++
-                }
-
-                group1 == null && group2 != null -> {
-                    group2.add(specB1)
-                    counter++
-                }
-
-                group1 != null && group2 != null -> {
-
-                    group1.addAll(group2)
-                    group2.clear()
-                    counter++
-                }
-            }
-            shortestConnections = shortestConnections.filterNot { (b1, _) -> b1 == specB1 }.toMutableList()
-//            results.forEach {
-//                println(it)
-//            }
-//            println()
+            val (box1, box2) = boxPairsByDist.next().first
+            val main = circuits.get(box1)!!.getMaster()
+            val other = circuits.get(box2)!!.getMaster()
+            main.unionIfNot(other)
+            boxPairsByDist.removeConnected(box1, box2)
+            counter++
         }
 
-//        shortestConnections.forEach { (id, connections) ->
-//            println(id to connections)
-//        }
-        results.sortedBy { it.count() }.reversed().forEach {
-            println(it)
-        }
-        return results.map{ it.count()}.sortedBy { it }.reversed().take(3).reduce { a, b -> a * b }.toString()
+        return circuits.values.map { it.getMaster() }.toSet().map { it.count }.sortedBy { it }.reversed().take(3)
+            .reduce { a, b -> a * b }.toString()
     }
 
-    override fun partTwoResult(): String = TODO()
+    override fun partTwoResult(): String {
+        val boxes = inputAsList.mapIndexed { id, line ->
+            id to line.toVec3()
+        }.toSet()
+
+        val boxPairsByDist = BoxPairsByDist.new(boxes)
+
+        val circuits: MutableMap<Int, Circuit> = boxes.associate { (id, _) -> id to Circuit(id) }.toMutableMap()
+        while (true) {
+            val (box1, box2) = boxPairsByDist.next().first
+            val main = circuits.get(box1)!!.getMaster()
+            val other = circuits.get(box2)!!.getMaster()
+            main.unionIfNot(other)
+            if (main.count == boxes.count())
+                return (boxes.find { it.first == box1 }!!.second.x * boxes.find { it.first == box2 }!!.second.x)
+                    .toInt()
+                    .toString()
+            boxPairsByDist.removeConnected(box1, box2)
+        }
+    }
+}
+
+private class Circuit(
+    var value: Int
+) {
+    var root: Circuit
+    var count = 1
+
+    init {
+        root = this
+    }
+
+    fun getMaster(): Circuit {
+        return if (root.value == this.value) this else root.getMaster()
+    }
+
+    fun unionIfNot(other: Circuit) {
+        if (this.getMaster() != other.getMaster()) {
+            other.getMaster().root = this
+            this.count = count + other.count
+        }
+    }
+}
+
+private class BoxPairsByDist private constructor(
+    var collection: MutableMap<Pair<Int, Int>, Double>
+) {
+    fun next(): Pair<Pair<Int, Int>, Double> {
+        val nextKey = collection.keys.first()
+        val nextValue = collection.remove(nextKey)!!
+        return nextKey to nextValue
+    }
+
+    fun removeConnected(firstBox: Int, secondBox: Int) {
+        collection.remove(firstBox to secondBox)
+        collection.remove(secondBox to firstBox)
+    }
+
+    companion object {
+        fun new(boxes: Set<Pair<Int, Vec3>>): BoxPairsByDist =
+            boxes.flatMap { (specId, specVec) ->
+                boxes.filterNot { (nextId, _) -> nextId == specId }
+                    .map { (nextId, nextVec) -> (specId to nextId) to specVec.distance(nextVec) }
+            }.sortedBy { (_, dist) -> dist }
+                .let { BoxPairsByDist(it.toMap().toMutableMap()) }
+
+
+    }
 }
 

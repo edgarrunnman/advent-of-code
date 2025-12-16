@@ -61,53 +61,53 @@ class Day8(override var dataFetcher: DataFetcher) : Solution {
             boxPairsByDist.removeConnected(box1, box2)
         }
     }
-}
+    private class Circuit(
+        var value: Int
+    ) {
+        var root: Circuit
+        var count = 1
 
-private class Circuit(
-    var value: Int
-) {
-    var root: Circuit
-    var count = 1
+        init {
+            root = this
+        }
 
-    init {
-        root = this
+        fun getMaster(): Circuit {
+            return if (root.value == this.value) this else root.getMaster()
+        }
+
+        fun unionIfNot(other: Circuit) {
+            if (this.getMaster() != other.getMaster()) {
+                other.getMaster().root = this
+                this.count = count + other.count
+            }
+        }
     }
 
-    fun getMaster(): Circuit {
-        return if (root.value == this.value) this else root.getMaster()
-    }
+    private class BoxPairsByDist private constructor(
+        var collection: MutableMap<Pair<Int, Int>, Double>
+    ) {
+        fun next(): Pair<Pair<Int, Int>, Double> {
+            val nextKey = collection.keys.first()
+            val nextValue = collection.remove(nextKey)!!
+            return nextKey to nextValue
+        }
 
-    fun unionIfNot(other: Circuit) {
-        if (this.getMaster() != other.getMaster()) {
-            other.getMaster().root = this
-            this.count = count + other.count
+        fun removeConnected(firstBox: Int, secondBox: Int) {
+            collection.remove(firstBox to secondBox)
+            collection.remove(secondBox to firstBox)
+        }
+
+        companion object {
+            fun new(boxes: Set<Pair<Int, Vec3>>): BoxPairsByDist =
+                boxes.flatMap { (specId, specVec) ->
+                    boxes.filterNot { (nextId, _) -> nextId == specId }
+                        .map { (nextId, nextVec) -> (specId to nextId) to specVec.distance(nextVec) }
+                }.sortedBy { (_, dist) -> dist }
+                    .let { BoxPairsByDist(it.toMap().toMutableMap()) }
+
+
         }
     }
 }
 
-private class BoxPairsByDist private constructor(
-    var collection: MutableMap<Pair<Int, Int>, Double>
-) {
-    fun next(): Pair<Pair<Int, Int>, Double> {
-        val nextKey = collection.keys.first()
-        val nextValue = collection.remove(nextKey)!!
-        return nextKey to nextValue
-    }
-
-    fun removeConnected(firstBox: Int, secondBox: Int) {
-        collection.remove(firstBox to secondBox)
-        collection.remove(secondBox to firstBox)
-    }
-
-    companion object {
-        fun new(boxes: Set<Pair<Int, Vec3>>): BoxPairsByDist =
-            boxes.flatMap { (specId, specVec) ->
-                boxes.filterNot { (nextId, _) -> nextId == specId }
-                    .map { (nextId, nextVec) -> (specId to nextId) to specVec.distance(nextVec) }
-            }.sortedBy { (_, dist) -> dist }
-                .let { BoxPairsByDist(it.toMap().toMutableMap()) }
-
-
-    }
-}
 

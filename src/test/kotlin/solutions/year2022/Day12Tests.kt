@@ -1,7 +1,7 @@
 package solutions.year2022
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 import shared.DataFetcherMock
 import solutions.year2022.*
 
@@ -21,7 +21,7 @@ abdefghi
         val day = Day12(fetcher)
         val result = day.partOneResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "31", //Answer (from Advent of Code)
             result
         )
@@ -33,7 +33,7 @@ abdefghi
         val day = Day12(fetcher)
         val result = day.partTwoResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "29", //Answer (from Advent of Code)
             result
         )

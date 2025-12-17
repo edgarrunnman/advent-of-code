@@ -1,10 +1,8 @@
 package solutions.year2022
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 import shared.DataFetcherMock
-import solutions.year2022.Day15
-import solutions.year2022.Day16
 
 class Day16Tests {
     private var testInputData = """
@@ -28,7 +26,7 @@ Valve JJ has flow rate=21; tunnel leads to valve II
         val day = Day16(fetcher)
         val result = day.partOneResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "1651", //Answer (from Advent of Code)
             result
         )
@@ -40,7 +38,7 @@ Valve JJ has flow rate=21; tunnel leads to valve II
         val day = Day15(fetcher)
         val result = day.partTwoResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "1", //Answer (from Advent of Code)
             result
         )

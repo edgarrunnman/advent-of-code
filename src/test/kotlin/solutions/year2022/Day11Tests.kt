@@ -1,7 +1,7 @@
 package solutions.year2022
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 import shared.DataFetcherMock
 import solutions.year2022.*
 
@@ -43,7 +43,7 @@ Monkey 3:
         val day = Day11(fetcher)
         val result = day.partOneResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "10605", //Answer (from Advent of Code)
             result
         )
@@ -55,7 +55,7 @@ Monkey 3:
         val day = Day11(fetcher)
         val result = day.partTwoResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "2713310158", //Answer (from Advent of Code)
             result
         )

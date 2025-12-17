@@ -2,12 +2,12 @@ package solutions.year2025
 
 import DataFetcher
 import solutions.Solution
-import utils.Vec3
 import utils.area
-import utils.distance
+import utils.isInsideOrOnBoundary
+import utils.polygonFromBreakpoints
+import utils.polygonFromRectangle
+import utils.toCoordinate
 import utils.toVec2
-import utils.toVec3
-import kotlin.collections.toMutableMap
 
 class Day9(override var dataFetcher: DataFetcher) : Solution {
     override val year: Int = 2025
@@ -28,7 +28,29 @@ class Day9(override var dataFetcher: DataFetcher) : Solution {
             }.max().toString()
         }
 
-    override fun partTwoResult(): String = TODO()
+    override fun partTwoResult(): String {
+        val coordinates = inputAsList.map { it.toCoordinate() }
+
+        val polygon = polygonFromBreakpoints(coordinates)
+
+        val rectangles = coordinates.let {
+            it.flatMap { p1 ->
+                it.mapNotNull { p2 ->
+                    if (p1 == p2) null
+                    if (p1.x == p2.x || p1.y == p2.y) null
+                    else polygonFromRectangle(p1, p2)
+                }
+            }
+        }
+        val validRect = rectangles.filter { isInsideOrOnBoundary(polygon, it) }
+
+        return validRect.maxBy { it.area }.coordinates.let { coordinates ->
+            val a = coordinates[0]
+            val b = coordinates[2]
+            a.area(b)
+        }.toString()
+
+    }
 }
 
 

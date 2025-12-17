@@ -1,9 +1,10 @@
 package solutions.year2022
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 import shared.DataFetcherMock
 import solutions.year2022.*
+
 class Day15Tests {
     private var testInputData = """
 Sensor at x=2, y=18: closest beacon is at x=-2, y=15
@@ -62,7 +63,7 @@ Sensor at x=2, y=0: closest beacon is at x=2, y=10
         val day = Day15(fetcher)
         val result = day.partOneResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "26", //Answer (from Advent of Code)
             result
         )
@@ -74,7 +75,7 @@ Sensor at x=2, y=0: closest beacon is at x=2, y=10
         val day = Day15(fetcher)
         val result = day.partTwoResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "1", //Answer (from Advent of Code)
             result
         )

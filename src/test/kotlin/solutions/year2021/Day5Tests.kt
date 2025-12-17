@@ -1,10 +1,8 @@
 package solutions.year2021
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 import shared.DataFetcherMock
-import solutions.year2021.Day3
-import solutions.year2021.Day5
 
 class Day5Tests {
     private var testInputData = """
@@ -26,7 +24,7 @@ class Day5Tests {
         val day = Day5(fetcher)
         val result = day.partOneResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "5",
             result
         )
@@ -38,7 +36,7 @@ class Day5Tests {
         val day = Day5(fetcher)
         val result = day.partTwoResult()
 
-        Assert.assertEquals(
+        assertEquals(
             "12",
             result
         )

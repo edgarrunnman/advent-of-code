@@ -38,3 +38,5 @@ bin/
 
 # Gradle cache
 .gradle/
+
+.idea/

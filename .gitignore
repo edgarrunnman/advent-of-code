@@ -31,3 +31,10 @@ bin/
 
 ### Manual ###
 .env
+
+# Gradle
+/build/
+**/build/
+
+# Gradle cache
+.gradle/
